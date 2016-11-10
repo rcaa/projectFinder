@@ -16,14 +16,14 @@ class SearchRepositories {
 				+ "&sort=stars&order=desc")
 		return url.getText()
 	}
-	
+
 	def parseJson(String json) {
 		def jsonSlurper = new JsonSlurper()
 		def object = jsonSlurper.parseText(json)
 		def listUrls = object.items.html_url
 		int i = 1
 		for (url in listUrls) {
-			println url
+			println i + ": " + url
 			i++
 		}
 	}
