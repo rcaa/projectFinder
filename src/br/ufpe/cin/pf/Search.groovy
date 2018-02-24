@@ -8,5 +8,6 @@ class Search {
 	int minimumForks
 	// repository name, description, readme, or any combination of these.
 	String keyword 
+	int numPages
 
 }
